@@ -36,7 +36,7 @@ function Add_Task() {
   </div>
   <div className="col-12">
     <label htmlFor="address" className="form-label">Home_Address</label>
-    <input type="text" className="form-control" id="address" placeholder="1234 Main St"{...register('address')}/>
+    <input type="text" className="form-control" id="address" placeholder="1234 Main St"{...register('home_address')}/>
   </div>
   <div className="col-12">
     <label htmlFor="inputAddress2" className="form-label">School_Address </label>

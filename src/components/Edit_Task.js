@@ -8,24 +8,23 @@ function Edit_Task() {
     const nav = useNavigate()
     const {stuId} = useParams()
 
-    function getData(){
-        axios.get(`http://localhost:8040/Todo_Task/${stuId}`).then(
-            (result)=>{
+    async function getData(){
+    const result =   await axios.get(`http://localhost:8040/Todo_Task/${stuId}`)
+            
                 setValue('fname',result.data.fname)
                 setValue('lname',result.data.lname)
                 setValue('marks',result.data.marks)
                 setValue('address',result.data.address)
                 setValue('address',result.data.address)
                 setValue('city',result.data.data)
-            }
-        )
+          
     }
     useEffect(()=>{
         getData()
     },[])
 
-    function update_Data(){
-        axios.put(`http://localhost:8040/Todo_Task/${stuId}`).then(
+    function update_Data(data){
+        axios.put(`http://localhost:8040/Todo_Task/${stuId}`,data).then(
             (result)=>{
                 console.log(result);
                 nav('/show')

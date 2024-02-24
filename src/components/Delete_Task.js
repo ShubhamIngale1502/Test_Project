@@ -30,9 +30,10 @@ function Delete_Task() {
 
     return (
     <div>
-        <h3>Do you really want to delete This </h3>
-        <button NavLink={"/show"} className='btn btn-otline-warning'>No</button>
-        <NavLink className='btn btn-otline-success' value = 'YES'onClick={()=>{delete_Data()}}>YES</NavLink>
+        <h3>Do you really want to delete this</h3>
+        <h2>Hospital_Id:-{student.id}</h2>
+        <NavLink to={'/show'}><button type='submit'onClick={()=>delete_Data()} className = "btn btn-outline-warning" value='Yes'>YES</button></NavLink> 
+        <NavLink to={'/show'}><button type='button'className = "btn btn-outline-danger" >No</button></NavLink> 
     </div>
   )
 }
